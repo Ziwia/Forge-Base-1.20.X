@@ -1,0 +1,9 @@
+{
+  "item.basemod.sapphire": "Sapphire",
+  "item.basemod.raw_sapphire": "Raw Sapphire",
+
+  "block.basemod.sapphire_block": "Block of Sapphire",
+  "block.basemod.raw_sapphire_block": "Block of Raw Sapphire",
+
+  "creativetab.tutorial_tab" : "Sapphire Tut tab"
+}
