@@ -21,7 +21,6 @@ public class BaseMod
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "basemod";
     private static final Logger LOGGER = LogUtils.getLogger();
-
     public BaseMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
