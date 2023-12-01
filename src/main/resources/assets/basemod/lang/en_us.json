@@ -5,5 +5,5 @@
   "block.basemod.sapphire_block": "Block of Sapphire",
   "block.basemod.raw_sapphire_block": "Block of Raw Sapphire",
 
-  "creativetab.tutorial_tab" : "Sapphire Tut tab"
+  "creativetab.base_tab" : "Sapphire Tut tab"
 }
