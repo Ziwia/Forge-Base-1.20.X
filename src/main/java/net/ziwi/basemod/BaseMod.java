@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.ziwi.basemod.block.ModBlocks;
+import net.ziwi.basemod.entity.ModEntities;
 import net.ziwi.basemod.item.ModCreativeModeTabs;
 import net.ziwi.basemod.item.ModItems;
 import org.slf4j.Logger;
@@ -31,6 +32,7 @@ public class BaseMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register((modEventBus));
 
         modEventBus.addListener(this::commonSetup);
 
