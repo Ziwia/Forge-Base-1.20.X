@@ -38,8 +38,9 @@ public class elfEntity extends Zombie implements GeoEntity {
                 .add(Attributes.ATTACK_DAMAGE, 9.0D)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.50D)
                 .add(Attributes.FOLLOW_RANGE, 55.0D)
-                .add(Attributes.FLYING_SPEED, 0.25D).add(Attributes.ATTACK_SPEED, 0.9D)
-                .add(SPAWN_REINFORCEMENTS_CHANCE, 0.5D)
+                .add(Attributes.FLYING_SPEED, 0.25D)
+                .add(Attributes.ATTACK_SPEED, 0.9D)
+                .add(SPAWN_REINFORCEMENTS_CHANCE, 0.7D)
                 .build();
     }
 
