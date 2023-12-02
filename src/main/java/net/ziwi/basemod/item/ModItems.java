@@ -2,11 +2,13 @@ package net.ziwi.basemod.item;
 
 import net.minecraft.client.tutorial.Tutorial;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.ziwi.basemod.BaseMod;
+import net.ziwi.basemod.entity.ModEntities;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -17,6 +19,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ELF_SPAWN_EGG = ITEMS.register("elf_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.ELF,9,22,new Item.Properties()));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
