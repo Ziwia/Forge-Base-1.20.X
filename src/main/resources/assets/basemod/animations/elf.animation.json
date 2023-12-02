@@ -72,6 +72,36 @@
 					}
 				}
 			}
+		},
+		"idle": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"rotation": {
+						"vector": [25, 0, 0]
+					}
+				},
+				"RightArm": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"LeftArm": {
+					"rotation": {
+						"vector": [-15, 0, 0]
+					}
+				},
+				"RightLeg": {
+					"rotation": {
+						"vector": [-12.5, 0, 0]
+					}
+				},
+				"LeftLeg": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2

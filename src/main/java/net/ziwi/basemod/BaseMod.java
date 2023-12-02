@@ -2,6 +2,7 @@ package net.ziwi.basemod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.ziwi.basemod.block.ModBlocks;
 import net.ziwi.basemod.entity.ModEntities;
+import net.ziwi.basemod.entity.client.elfRenderer;
 import net.ziwi.basemod.item.ModCreativeModeTabs;
 import net.ziwi.basemod.item.ModItems;
 import org.slf4j.Logger;
@@ -70,6 +72,7 @@ public class BaseMod {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(ModEntities.ELF.get(), elfRenderer::new);
         }
     }
 }

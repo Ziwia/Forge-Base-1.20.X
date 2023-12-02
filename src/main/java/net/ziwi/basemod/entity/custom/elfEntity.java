@@ -11,12 +11,20 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.core.animatable.GeoAnimatable;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.object.PlayState;
 
 import javax.print.attribute.Attribute;
 
 import static net.minecraft.world.entity.ai.attributes.Attributes.SPAWN_REINFORCEMENTS_CHANCE;
 
-public class elfEntity extends Zombie {
+public class elfEntity extends Zombie implements GeoEntity {
+
+    private AnimatableInstanceCache c = new SingletonAnimatableInstanceCache(this);
 
     public elfEntity(EntityType<? extends Zombie> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -60,4 +68,24 @@ public class elfEntity extends Zombie {
     }
 
 
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
+    controllerRegistrar.add(new AnimationController<>(this,"controller",0,this::predicate));
+    }
+
+    private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> tAnimationState) {
+        if(tAnimationState.isMoving()){
+            tAnimationState.getController().setAnimation(RawAnimation.begin()
+                    .then("animation.elf.walk", Animation.LoopType.LOOP));
+            return PlayState.CONTINUE;
+        }
+        tAnimationState.getController().setAnimation(RawAnimation.begin()
+                .then("animation.elf.idle", Animation.LoopType.LOOP));
+        return PlayState.CONTINUE;
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return c;
+    }
 }
