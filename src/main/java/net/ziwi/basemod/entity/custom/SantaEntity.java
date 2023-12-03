@@ -26,7 +26,7 @@ public class SantaEntity extends WitherBoss implements PowerableMob, RangedAttac
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes()
+        return WitherBoss.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 300.0D)
                 .add(Attributes.MOVEMENT_SPEED, (double)0.6F)
                 .add(Attributes.FLYING_SPEED, (double)0.6F)
