@@ -58,7 +58,12 @@ public class BaseMod {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.RAW_SAPPHIRE);
+            event.accept(ModItems.CONDENSED_SUGAR);
 
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.CANDY_SWORD);
         }
     }
 
