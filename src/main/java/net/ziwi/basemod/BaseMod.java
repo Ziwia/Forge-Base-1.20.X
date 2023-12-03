@@ -17,8 +17,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.ziwi.basemod.block.ModBlocks;
 import net.ziwi.basemod.entity.ModEntities;
 import net.ziwi.basemod.entity.client.ElfRenderer;
+import net.ziwi.basemod.entity.client.SantaRenderer;
 import net.ziwi.basemod.item.ModCreativeModeTabs;
 import net.ziwi.basemod.item.ModItems;
+import net.ziwi.basemod.sound.ModSounds;
 import org.slf4j.Logger;
 
 import javax.swing.text.html.parser.Entity;
@@ -36,6 +38,9 @@ public class BaseMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModEntities.register(modEventBus);
+//        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -71,6 +76,8 @@ public class BaseMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.ELF.get(), ElfRenderer::new);
+            EntityRenderers.register(ModEntities.SANTA.get(), SantaRenderer::new);
+
         }
     }
 }
