@@ -19,6 +19,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.RAW_SAPPHIRE);
+        simpleItem(ModItems.CONDENSED_SUGAR);
+        handheldItem(ModItems.CANDY_SWORD);
+
 //        withExistingParent(ModItems.ELF_SPAWN_EGG.getId().getPath(),mcLoc("item/template_spawn_egg"));
     }
 
@@ -26,4 +29,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(BaseMod.MOD_ID, "item/" + item.getId().getPath()));
     }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item){
+        return withExistingParent(item.getId().getPath(),new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(BaseMod.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
 }

@@ -2,6 +2,8 @@ package net.ziwi.basemod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.MinecartItem;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -33,6 +35,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.SAPPHIRE.get())
                 .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
                 .save(p_251297_);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CONDENSED_SUGAR.get())
+                .pattern("SS")
+                .pattern("SS")
+                .define('S',(Items.SUGAR))
+                .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR)).save(p_251297_);
+
     }
 
 
