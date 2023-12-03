@@ -1,0 +1,4 @@
+// 1.20.1	2023-12-02T16:41:36.6254338	Tags for minecraft:block mod id basemod
+b1d26b1997b320d393bed20ae661f28e30b57fe5 data/minecraft/tags/blocks/mineable/pickaxe.json
+a0a994feeb6c6983ba35ffccb7914b4e68cf251e data/minecraft/tags/blocks/needs_diamond_tool.json
+f2058241b7fb9ecc697e6bd708e8796374e2a938 data/minecraft/tags/blocks/needs_iron_tool.json

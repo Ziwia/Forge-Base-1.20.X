@@ -16,9 +16,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.ziwi.basemod.block.ModBlocks;
 import net.ziwi.basemod.entity.ModEntities;
-import net.ziwi.basemod.entity.client.elfRenderer;
+import net.ziwi.basemod.entity.client.ElfRenderer;
+import net.ziwi.basemod.entity.client.SantaRenderer;
 import net.ziwi.basemod.item.ModCreativeModeTabs;
 import net.ziwi.basemod.item.ModItems;
+import net.ziwi.basemod.sound.ModSounds;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -34,7 +36,9 @@ public class BaseMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModEntities.register((modEventBus));
+
+        ModEntities.register(modEventBus);
+//        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -69,10 +73,9 @@ public class BaseMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-            EntityRenderers.register(ModEntities.ELF.get(), elfRenderer::new);
+            EntityRenderers.register(ModEntities.ELF.get(), ElfRenderer::new);
+            EntityRenderers.register(ModEntities.SANTA.get(), SantaRenderer::new);
+
         }
     }
 }
