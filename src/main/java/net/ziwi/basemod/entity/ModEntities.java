@@ -9,6 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.ziwi.basemod.BaseMod;
 import net.ziwi.basemod.entity.custom.ElfEntity;
 import net.ziwi.basemod.entity.custom.SantaEntity;
+import net.ziwi.basemod.entity.custom.SantaPresent;
 
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
@@ -21,6 +22,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<SantaEntity>> SANTA =
             ENTITY_TYPES.register("santa", () -> EntityType.Builder.of(SantaEntity::new, MobCategory.MONSTER)
                     .sized(4.5f, 4.5f).build("santa"));
+
+    public static final RegistryObject<EntityType<SantaPresent>> SANTA_PRESENT =
+            ENTITY_TYPES.register("santa_present", () -> EntityType.Builder.of(SantaPresent::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f).build("santa_present"));
 
 
     public static void register(IEventBus eventBus) {
