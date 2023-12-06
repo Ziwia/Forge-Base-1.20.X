@@ -1,9 +1,11 @@
-// 1.20.1	2023-12-02T16:41:36.6294219	Recipes
+// 1.20.1	2023-12-03T19:29:31.3649428	Recipes
+a24567a27f652488e3927f3f446a5c2c52a0f48d data/basemod/advancements/recipes/misc/condensed_sugar.json
 a3b4c47908eb0f13bc956dac77e81ff61b312cdf data/basemod/advancements/recipes/misc/sapphire_block.json
 575f01caafc5c8a93901a0fb2744ed918035c9d2 data/basemod/advancements/recipes/misc/sapphire_from_blasting_raw_sapphire.json
 1b6832a2c092e5345bc1acd9923c54dacebd9aa9 data/basemod/advancements/recipes/misc/sapphire_from_blasting_sapphire.json
 c248dc8876746990c1a9090a49e95bb932197878 data/basemod/advancements/recipes/misc/sapphire_from_smelting_raw_sapphire.json
 608001326aeee9d38eef82f72faa4d6c0c4df842 data/basemod/advancements/recipes/misc/sapphire_from_smelting_sapphire.json
+81358645571f62dc732634a431ad17c0eff36207 data/basemod/recipes/condensed_sugar.json
 726283daf1dd5f541b9c7060ad9cdeb6320d2850 data/basemod/recipes/sapphire_block.json
 38bfca7e6fdce73fed858f7274fcde90786ad87e data/basemod/recipes/sapphire_from_blasting_raw_sapphire.json
 68d6ad553a1d41051a048be9c94b3c9ebf9402f9 data/basemod/recipes/sapphire_from_blasting_sapphire.json

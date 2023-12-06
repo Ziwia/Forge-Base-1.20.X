@@ -10,4 +10,7 @@ public class ModModelLayers {
 
     public static final ModelLayerLocation SANTA_LAYER = new ModelLayerLocation(
             new ResourceLocation(BaseMod.MOD_ID, "santa_layer"), "main");
+
+    public static final ModelLayerLocation SANTA_PRESENT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(BaseMod.MOD_ID, "santa_present_layer"), "main");
 }

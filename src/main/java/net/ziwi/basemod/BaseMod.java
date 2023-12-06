@@ -1,7 +1,6 @@
 package net.ziwi.basemod;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -17,10 +16,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.ziwi.basemod.block.ModBlocks;
 import net.ziwi.basemod.entity.ModEntities;
 import net.ziwi.basemod.entity.client.ElfRenderer;
+import net.ziwi.basemod.entity.client.SantaPresentRenderer;
 import net.ziwi.basemod.entity.client.SantaRenderer;
 import net.ziwi.basemod.item.ModCreativeModeTabs;
 import net.ziwi.basemod.item.ModItems;
-import net.ziwi.basemod.sound.ModSounds;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -39,6 +38,7 @@ public class BaseMod {
 
         ModEntities.register(modEventBus);
 //        ModSounds.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 
@@ -80,6 +80,7 @@ public class BaseMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.ELF.get(), ElfRenderer::new);
             EntityRenderers.register(ModEntities.SANTA.get(), SantaRenderer::new);
+            EntityRenderers.register(ModEntities.SANTA_PRESENT.get(), SantaPresentRenderer::new);
 
         }
     }
