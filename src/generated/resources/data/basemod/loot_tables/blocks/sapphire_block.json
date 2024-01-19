@@ -3,15 +3,38 @@
   "pools": [
     {
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "basemod:sapphire_block"
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 16.0,
+                "min": 8.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:coal",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 16.0,
+                "min": 8.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:diamond",
+          "weight": 40
         }
       ],
       "rolls": 1.0

@@ -28,6 +28,8 @@ public class SantaEntity extends WitherBoss implements PowerableMob, RangedAttac
         this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.0D, 40, 20.0F));
 
         //add in candy cane
+        this.goalSelector.addGoal(1, new MoveTowardsTargetGoal(this,1,1 ));
+
 
         super.registerGoals();
     }
@@ -73,9 +75,11 @@ public class SantaEntity extends WitherBoss implements PowerableMob, RangedAttac
         public static AttributeSupplier.Builder createAttributes() {
         return WitherBoss.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 300.0D)
-                .add(Attributes.MOVEMENT_SPEED, (double)0.6F)
-                .add(Attributes.FLYING_SPEED, (double)0.6F)
+                .add(Attributes.MOVEMENT_SPEED, (double) 0.6F)
+                .add(Attributes.FLYING_SPEED, (double) 0.6F)
                 .add(Attributes.FOLLOW_RANGE, 40.0D)
                 .add(Attributes.ARMOR, 4.0D);
     }
+
+
 }

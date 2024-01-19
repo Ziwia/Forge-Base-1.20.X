@@ -4,11 +4,11 @@
   "item.basemod.condensed_sugar": "Condensed Sugar",
   "item.basemod.candy_sword": "Candy Cane Sword",
 
-  "block.basemod.sapphire_block": "Block of Sapphire",
-  "block.basemod.raw_sapphire_block": "Block of Raw Sapphire",
+  "block.basemod.sapphire_block": "Present",
+  "block.basemod.raw_sapphire_block": "Block of Raw Present",
 
   "entity.basemod.elf": "Elf",
   "entity.basemod.santa": "Santa",
 
-  "creativetab.base_tab" : "Sapphire Tut tab"
+  "creativetab.base_tab" : "Have you been a good boy?"
 }
