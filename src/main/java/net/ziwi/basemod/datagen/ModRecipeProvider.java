@@ -43,6 +43,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S',(Items.SUGAR))
                 .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR)).save(p_251297_);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CANDY_SWORD.get())
+                .pattern("S")
+                .pattern("S")
+                .pattern("L")
+                .define('S',(ModItems.CONDENSED_SUGAR.get()))
+                .define('L', (Items.DIAMOND_SWORD))
+                .unlockedBy(getHasName(ModItems.CONDENSED_SUGAR.get()), has(ModItems.CONDENSED_SUGAR.get()))
+                .save(p_251297_);
+
     }
 
 
